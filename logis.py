@@ -12,7 +12,7 @@ from sklearn import metrics
 
 df = pd.read_csv("credit access.csv", encoding='latin-1')
 
-st.title("Hồi quy tuyến tính")
+st.title("Hồi quy tuyến tính Nhóm 3")
 st.write("## Dự báo khả năng tiếp cận vốn tín dụng của nông hộ")
 
 uploaded_file = st.file_uploader("Choose a file", type=['csv'])
@@ -23,7 +23,7 @@ if uploaded_file is not None:
 X = df.drop(columns=['y'])
 y = df['y']
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state= 12)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state= 10)
 
 model = LogisticRegression()
 
