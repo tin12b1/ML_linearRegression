@@ -10,7 +10,7 @@ from sklearn import metrics
 
 
 
-df = pd.read_csv("credit access.csv", encoding='latin-1')
+#df = pd.read_csv("credit access.csv", encoding='latin-1')
 
 st.title("Hồi quy tuyến tính Nhóm 3")
 st.write("## Dự báo khả năng tiếp cận vốn tín dụng của nông hộ")
@@ -41,18 +41,18 @@ confusion_matrix = pd.crosstab(y_test, yhat_test, rownames=['Actual'], colnames=
 
 
 
-menu = ["Mục tiêu của mô hình", "Xây dựng mô hình", "Sử dụng mô hình để dự báo"]
+menu = ["Giới thiệu về Chi nhánh", "Mục tiêu của mô hình", "Xây dựng mô hình", "Sử dụng mô hình để dự báo"]
 choice = st.sidebar.selectbox('Danh mục tính năng', menu)
 
-#if choice == 'Giới thiệu về Chi nhánh':    
-    #st.subheader("Giới thiệu về Chi nhánh")
-    #st.write("""
+if choice == 'Giới thiệu về Chi nhánh':    
+    st.subheader("Giới thiệu về Chi nhánh")
+    st.write("""
     ###### Logo Agribank
-    #""")  
-    #st.write("""###### Agribank - Mang phồn thịnh đến khách hàng""")
-    #st.image("logo-Agribank.jpg")
+    """)  
+    st.write("""###### Agribank - Mang phồn thịnh đến khách hàng""")
+    st.image("logo-Agribank.jpg")
 
-if choice == 'Mục tiêu của mô hình':    
+elif choice == 'Mục tiêu của mô hình':    
     st.subheader("Mục tiêu của mô hình")
     st.write("""
     ###### Mô hình được xây dựng để dự báo khả năng tiếp cận vốn tín dụng của nông hộ dựa trên các biến đặc điểm chủ hộ, điều kiện của nông hộ.
