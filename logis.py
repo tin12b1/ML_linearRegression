@@ -41,10 +41,18 @@ confusion_matrix = pd.crosstab(y_test, yhat_test, rownames=['Actual'], colnames=
 
 
 
-menu = ["Mục tiêu của mô hình", "Xây dựng mô hình", "Sử dụng mô hình để dự báo"]
+menu = ["Giới thiệu về Chi nhánh", "Mục tiêu của mô hình", "Xây dựng mô hình", "Sử dụng mô hình để dự báo"]
 choice = st.sidebar.selectbox('Danh mục tính năng', menu)
 
-if choice == 'Mục tiêu của mô hình':    
+if choice == 'Giới thiệu về Chi nhánh':    
+    st.subheader("Giới thiệu về Chi nhánh")
+    st.write("""
+    ###### Logo Agribank
+    """)  
+    st.write("""###### Agribank - Mang phồn thịnh đến khách hàng""")
+    st.image("logo-Agribank.jpg")
+
+elif choice == 'Mục tiêu của mô hình':    
     st.subheader("Mục tiêu của mô hình")
     st.write("""
     ###### Mô hình được xây dựng để dự báo khả năng tiếp cận vốn tín dụng của nông hộ dựa trên các biến đặc điểm chủ hộ, điều kiện của nông hộ.
