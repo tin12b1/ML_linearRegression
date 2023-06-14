@@ -96,18 +96,13 @@ elif choice == 'Sử dụng mô hình để dự báo':
             # st.write(lines.columns)
             flag = True       
     if type=="Input":        
-        git = st.number_input('Insert y')
-        DT = st.number_input('Insert DT')
-        TN = st.number_input('Insert TN')
-        SPT = st.number_input('Insert SPT')
-        GTC = st.number_input('Insert GTC')
-        GD = st.number_input('Insert GD')
-        TCH = st.number_input('Insert TCH')
-        GT = st.number_input('Insert GT')
-        DV = st.number_input('Insert DV')
-        VPCT = st.number_input('Insert VPCT')
-        LS = st.number_input('Insert LS')
-        lines={'y':[git],'DT':[DT],'TN':[TN],'SPT':[SPT],'GTC':[GTC],'GD':[GD],'TCH':[TCH],'GT':[GT],'DV':[DV],'VPCT':[VPCT],'LS':[LS]}
+        git = st.number_input('Khai báo giá trị dự báo')
+        DT = st.number_input('Khai báo diện tích đất')
+        TN = st.number_input('Khai báo thu nhập')
+        SPT = st.number_input('Khai báo số người phụ thuộc')
+        GTC = st.number_input('Khai báo giá trị tài sản thế chấp')
+        LS = st.number_input('Khai báo lịch sử tín dụng')
+        lines={'y':[git],'DT':[DT],'TN':[TN],'SPT':[SPT],'GTC':[GTC],'LS':[LS]}
         lines=pd.DataFrame(lines)
         st.dataframe(lines)
         flag = True
